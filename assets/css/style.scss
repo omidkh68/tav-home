@@ -1,0 +1,87 @@
+@import "variables";
+@import "normalize-scss/sass/normalize";
+@import "samim";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px !important;
+  font-family: Samim, tahoma, serif !important;
+}
+
+.clear {
+  clear: both;
+}
+
+.wrapper {
+  border: solid 1px #3c763d;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+// top navigation of website
+.nav-top {
+  @extend .wrapper;
+  @extend .clear;
+
+  margin-top: 2em;
+  height: 50px;
+  width: $full-size;
+}
+// end of top navigation of website
+
+// header of website
+header {
+  @extend .wrapper;
+  @extend .clear;
+
+  height: 200px;
+  width: $full-size;
+}
+// end of header of website
+
+// bottom navigation of website
+.nav-bottom {
+  @extend .wrapper;
+  @extend .clear;
+
+  height: 50px;
+  width: $full-size;
+}
+// end of bottom navigation of website
+
+// main container stylesheet
+.main-container {
+  @extend .wrapper;
+  @extend .clear;
+
+  height: 500px;
+  width: $full-size;
+}
+// end of main container stylesheet
+
+// right side menu stylesheet
+.right-side-menu {
+  border: solid 1px #3c763d;
+  height: 500px;
+  width: 19.5%;
+}
+// end of right side menu stylesheet
+
+// main content of website stylesheet
+.content {
+  border: solid 1px #3c763d;
+  height: 500px;
+  width: 79.8%;
+}
+// end of main content of website stylesheet
+
+// footer of website stylesheet
+footer {
+  @extend .wrapper;
+  @extend .clear;
+
+  height: 200px;
+  width: $full-size;
+}
+// end of footer of website stylesheet

@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'Samim';
+  src: url("../fonts/samim-font-v0.11.0/Samim.eot");
+  src: url("../fonts/samim-font-v0.11.0/Samim.eot?#iefix") format("embedded-opentype"), url("../fonts/samim-font-v0.11.0/Samim.woff") format("woff"), url("../fonts/samim-font-v0.11.0/Samim.ttf") format("truetype");
+  font-weight: normal; }
+@font-face {
+  font-family: 'Samim';
+  src: url("../fonts/samim-font-v0.11.0/Samim-Bold.eot");
+  src: url("../fonts/samim-font-v0.11.0/Samim-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/samim-font-v0.11.0/Samim-Bold.woff") format("woff"), url("../fonts/samim-font-v0.11.0/Samim-Bold.ttf") format("truetype");
+  font-weight: bold; }
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px !important;
+  font-family: Samim, tahoma, serif !important; }
+
+.clear, .nav-top, header, .nav-bottom, .main-container, footer {
+  clear: both; }
+
+.wrapper, .nav-top, header, .nav-bottom, .main-container, footer {
+  border: solid 1px #3c763d;
+  margin: 0 auto;
+  max-width: 1200px; }
+
+.nav-top {
+  margin-top: 2em;
+  height: 50px;
+  width: 100%; }
+
+header {
+  height: 200px;
+  width: 100%; }
+
+.nav-bottom {
+  height: 50px;
+  width: 100%; }
+
+.main-container {
+  height: 500px;
+  width: 100%; }
+
+.right-side-menu {
+  border: solid 1px #3c763d;
+  height: 500px;
+  width: 19.5%; }
+
+.content {
+  border: solid 1px #3c763d;
+  height: 500px;
+  width: 79.8%; }
+
+footer {
+  height: 200px;
+  width: 100%; }
+
+/*# sourceMappingURL=style.css.map */
