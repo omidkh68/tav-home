@@ -1,20 +1,40 @@
 @import "variables";
 @import "normalize-scss/sass/normalize";
 @import "samim";
+@import "mixins";
 
 body {
+  background-color: #ededed !important;
   margin: 0;
-  padding: 0;
-  font-size: 16px !important;
-  font-family: Samim, tahoma, serif !important;
+  padding: 0 $half-em;
+  font-size: $body-default-font-size !important;
+  font-family: $font-stack;
 }
 
 .clear {
   clear: both;
 }
 
+.bg-white {
+  background-color: #fff;
+}
+
+.no-padding-side {
+  padding-left: $ziro !important;
+  padding-right: $ziro !important;
+}
+
+.round-corner {
+  @include radius($all: true);
+}
+
+.box-style {
+  @extend .round-corner;
+  @extend .bg-white;
+  border: solid 1px $ultralightgraycolor;
+}
+
 .wrapper {
-  border: solid 1px #3c763d;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -23,10 +43,37 @@ body {
 .nav-top {
   @extend .wrapper;
   @extend .clear;
+  @extend .box-style;
 
-  margin-top: 2em;
-  height: 50px;
+  margin : 2em auto $half-em auto;
+  height: $nav-height;
   width: $full-size;
+
+  .navbar-default {
+    border:none;
+    max-width: $full-size;
+    min-height: $nav-height;
+
+    .navbar-nav > li {
+      height: $nav-height;
+      > a {
+        color: $disblock;
+        width: $full-size;
+        height: $full-size;
+        line-height: $nav-height;
+        padding: $ziro 19px;
+        text-align: $center;
+      }
+
+      &:hover {
+        background: #786B50;
+
+        > a {
+          color: #f2f2f2;
+        }
+      }
+    }
+  }
 }
 // end of top navigation of website
 
@@ -34,17 +81,34 @@ body {
 header {
   @extend .wrapper;
   @extend .clear;
+  @extend .box-style;
 
+  margin-bottom: $half-em;
   height: 200px;
+  position: $relative;
   width: $full-size;
+
+  &::before {
+    content: '';
+    position: $absolute;
+    width: 77px;
+    height: 79px;
+    background: url("../images/flag.png") no-repeat;
+    left: -4px;
+    top: -4px;
+  }
 }
 // end of header of website
 
 // bottom navigation of website
 .nav-bottom {
   @extend .wrapper;
+  @extend .round-corner;
   @extend .clear;
 
+  background-color: $darkorangecolor;
+  border: solid 1px $redcolor;
+  margin-bottom: $half-em;
   height: 50px;
   width: $full-size;
 }
@@ -55,6 +119,7 @@ header {
   @extend .wrapper;
   @extend .clear;
 
+  margin-bottom: $half-em;
   height: 500px;
   width: $full-size;
 }
@@ -62,17 +127,19 @@ header {
 
 // right side menu stylesheet
 .right-side-menu {
-  border: solid 1px #3c763d;
+  @extend .box-style;
+
   height: 500px;
-  width: 19.5%;
+  width: 22.5%;
 }
 // end of right side menu stylesheet
 
 // main content of website stylesheet
 .content {
-  border: solid 1px #3c763d;
+  @extend .box-style;
+
   height: 500px;
-  width: 79.8%;
+  width: 76.8%;
 }
 // end of main content of website stylesheet
 
@@ -80,7 +147,11 @@ header {
 footer {
   @extend .wrapper;
   @extend .clear;
+  @extend .box-style;
 
+  background-color: $darkgraycolor;
+  border: solid 1px $ultradarkgraycolor;
+  margin-bottom: $half-em;
   height: 200px;
   width: $full-size;
 }

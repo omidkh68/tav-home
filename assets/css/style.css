@@ -9,47 +9,94 @@
   src: url("../fonts/samim-font-v0.11.0/Samim-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/samim-font-v0.11.0/Samim-Bold.woff") format("woff"), url("../fonts/samim-font-v0.11.0/Samim-Bold.ttf") format("truetype");
   font-weight: bold; }
 body {
+  background-color: #ededed !important;
   margin: 0;
-  padding: 0;
-  font-size: 16px !important;
+  padding: 0 0.5em;
+  font-size: 14px !important;
   font-family: Samim, tahoma, serif !important; }
 
 .clear, .nav-top, header, .nav-bottom, .main-container, footer {
   clear: both; }
 
+.bg-white, .box-style, .nav-top, header, .right-side-menu, .content, footer {
+  background-color: #fff; }
+
+.no-padding-side {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+
+.round-corner, .box-style, .nav-top, header, .right-side-menu, .content, footer, .nav-bottom {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; }
+
+.box-style, .nav-top, header, .right-side-menu, .content, footer {
+  border: solid 1px #e1e1e1; }
+
 .wrapper, .nav-top, header, .nav-bottom, .main-container, footer {
-  border: solid 1px #3c763d;
   margin: 0 auto;
   max-width: 1200px; }
 
 .nav-top {
-  margin-top: 2em;
+  margin: 2em auto 0.5em auto;
   height: 50px;
   width: 100%; }
+  .nav-top .navbar-default {
+    border: none;
+    max-width: 100%;
+    min-height: 50px; }
+    .nav-top .navbar-default .navbar-nav > li {
+      height: 50px; }
+      .nav-top .navbar-default .navbar-nav > li > a {
+        color: block;
+        width: 100%;
+        height: 100%;
+        line-height: 50px;
+        padding: 0 19px;
+        text-align: center; }
+      .nav-top .navbar-default .navbar-nav > li:hover {
+        background: #786B50; }
+        .nav-top .navbar-default .navbar-nav > li:hover > a {
+          color: #f2f2f2; }
 
 header {
+  margin-bottom: 0.5em;
   height: 200px;
+  position: relative;
   width: 100%; }
+  header::before {
+    content: '';
+    position: absolute;
+    width: 77px;
+    height: 79px;
+    background: url("../images/flag.png") no-repeat;
+    left: -4px;
+    top: -4px; }
 
 .nav-bottom {
+  background-color: #ef4e1e;
+  border: solid 1px #c34119;
+  margin-bottom: 0.5em;
   height: 50px;
   width: 100%; }
 
 .main-container {
+  margin-bottom: 0.5em;
   height: 500px;
   width: 100%; }
 
 .right-side-menu {
-  border: solid 1px #3c763d;
   height: 500px;
-  width: 19.5%; }
+  width: 22.5%; }
 
 .content {
-  border: solid 1px #3c763d;
   height: 500px;
-  width: 79.8%; }
+  width: 76.8%; }
 
 footer {
+  background-color: #454545;
+  border: solid 1px #363636;
+  margin-bottom: 0.5em;
   height: 200px;
   width: 100%; }
 

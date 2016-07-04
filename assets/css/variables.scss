@@ -1,2 +1,64 @@
+// font variables
+$body-default-font-size: 14px;
+$font-stack: Samim, tahoma, serif !important;
+
+// default property
+$center: center;
+$justify: justify;
+$right: right;
+$left: left;
+$dirleft: ltr;
+$dirright: rtl;
+$none: none;
+
+// color variables
+$purewhitecolor: #fff;
+$whitecolor: #fafafa;
+$mediumwhitecolor: #efefef;
+$ultralightgraycolor: #e1e1e1;
+$graycolor: #ccc;
+$lightgraycolor: #8e8e8e;
+$lightnormalgraycolor: rgba(54, 54, 54, .6);
+$mediumgraycolor: #555;
+$darkgraycolor: #454545;
+$ultradarkgraycolor: #363636;
+$lightblackcolor: #252525;
+$orangecolor: #f1af10;
+$darkorangecolor: #ef4e1e;
+$redcolor: #c34119;
+$darkbluecolor: #34495e;
+$subjecttitlecolor: #077d84;
+$mediumbluecolor: #559db9;
+$headerborderbluecolor: #1cc3b0;
+$darkblackcolor: #252525;
+$cyancolor: #18deb6;
+$fromgredient1: #ff882c;
+$togredient1: #fe5454;
+$lightcyancolor: #16ebc0;
+
+// positions
+$fixed: fixed;
+$relative: relative;
+$absolute: absolute;
+$disblock: block;
+
+// size variables
+$ziro: 0;
 $full-size: 100%;
 $half-size: 50%;
+$logowidth: 40px;
+$headerwidth: 60px;
+$headerwidthactivated: 270px;
+$headerheight: 40px;
+$footerheight: 30px;
+$half-em: .5em;
+$half-rem: .5rem;
+$full-em: 1em;
+$full-rem: 1rem;
+$nav-height: 50px;
+
+// formcontainer variables
+$formcontainerwidth: 1000px;
+$formleftside: 7%;
+$formcontent: 93%;
+$formcontainerheight: 500px;
