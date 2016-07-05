@@ -12,35 +12,41 @@ $dirright: rtl;
 $none: none;
 
 // color variables
-$purewhitecolor: #fff;
-$whitecolor: #fafafa;
-$mediumwhitecolor: #efefef;
-$ultralightgraycolor: #e1e1e1;
-$graycolor: #ccc;
-$lightgraycolor: #8e8e8e;
-$lightnormalgraycolor: rgba(54, 54, 54, .6);
-$mediumgraycolor: #555;
-$darkgraycolor: #454545;
-$ultradarkgraycolor: #363636;
-$lightblackcolor: #252525;
-$orangecolor: #f1af10;
-$darkorangecolor: #ef4e1e;
-$redcolor: #c34119;
-$darkbluecolor: #34495e;
-$subjecttitlecolor: #077d84;
-$mediumbluecolor: #559db9;
-$headerborderbluecolor: #1cc3b0;
-$darkblackcolor: #252525;
-$cyancolor: #18deb6;
-$fromgredient1: #ff882c;
-$togredient1: #fe5454;
-$lightcyancolor: #16ebc0;
+$pure-white-color: #fff;
+$white-color: #fafafa;
+$medium-white-color: #ededed;
+$ultralight-gray-color: #e1e1e1;
+$gray-color: #ccc;
+$light-gray-color: #8e8e8e;
+$light-normal-gray-color: rgba(54, 54, 54, .6);
+$medium-gray-color: #555;
+$dark-gray-color: #454545;
+$ultradark-gray-color: #363636;
+$light-black-color: #252525;
+$orange-color: #f1af10;
+$light-orange-color: #ccaca2;
+$ultralight-orange-color: #ffdca8;
+$ultralight-orange-border-color: #efbf78;
+$dark-orange-color: #b37028;
+$light-orange-color: #ff5a00;
+$medium-orange-color: #e08422;
+$red-color: #e54140;
+$dark-blue-color: #34495e;
+$subject-title-color: #077d84;
+$medium-blue-color: #5c95b1;
+$header-border-blue-color: #1cc3b0;
+$dark-black-color: #252525;
+$cyan-color: #18deb6;
+$from-gredient1: #ff882c;
+$to-gredient1: #fe5454;
+$light-cyan-color: #16ebc0;
 
-// positions
+// positions & displays
 $fixed: fixed;
 $relative: relative;
 $absolute: absolute;
 $disblock: block;
+$distable: table;
 
 // size variables
 $ziro: 0;

@@ -1,42 +1,16 @@
 @import "variables";
 @import "normalize-scss/sass/normalize";
-@import "samim";
 @import "mixins";
+@import "essential";
+@import "samim";
+@import "font-awesome/scss/font-awesome";
 
 body {
-  background-color: #ededed !important;
-  margin: 0;
-  padding: 0 $half-em;
+  background-color: $medium-white-color !important;
+  margin: $ziro;
+  padding: $ziro $half-em;
   font-size: $body-default-font-size !important;
   font-family: $font-stack;
-}
-
-.clear {
-  clear: both;
-}
-
-.bg-white {
-  background-color: #fff;
-}
-
-.no-padding-side {
-  padding-left: $ziro !important;
-  padding-right: $ziro !important;
-}
-
-.round-corner {
-  @include radius($all: true);
-}
-
-.box-style {
-  @extend .round-corner;
-  @extend .bg-white;
-  border: solid 1px $ultralightgraycolor;
-}
-
-.wrapper {
-  margin: 0 auto;
-  max-width: 1200px;
 }
 
 // top navigation of website
@@ -49,27 +23,78 @@ body {
   height: $nav-height;
   width: $full-size;
 
+  .navbar {
+    margin-bottom: $ziro;
+  }
+
   .navbar-default {
+    @extend .round-corner;
+
+    background-color: transparent;
     border:none;
+    min-height: $nav-height - 2px;
     max-width: $full-size;
-    min-height: $nav-height;
+
+    .navbar-nav {
+      padding: $ziro;
+    }
 
     .navbar-nav > li {
-      height: $nav-height;
+      @extend .transition-normal;
+
+      height: $nav-height - 2px;
+
       > a {
-        color: $disblock;
+        @extend .transition-normal;
+
+        color: $dark-orange-color;
         width: $full-size;
         height: $full-size;
-        line-height: $nav-height;
-        padding: $ziro 19px;
+        position: $relative;
+        line-height: $nav-height - 2px;
+        padding: $ziro $full-em;
         text-align: $center;
+
+        &::before {
+          @extend .transition-normal;
+
+          background-color: $ultralight-orange-border-color;
+          content: '';
+          height: 2px;
+          position: $absolute;
+          bottom: $ziro;
+          right: $ziro;
+          width: $ziro;
+        }
+
+        &:hover::before {
+          width: $full-size;
+        }
+
+        &.icons {
+          color: $medium-orange-color;
+        }
       }
 
       &:hover {
-        background: #786B50;
+        background: #f1fbcc;
+      }
 
-        > a {
-          color: #f2f2f2;
+      &.logo-holder {
+        &:hover {
+          background: none;
+        }
+
+        a {
+          line-height: 45px;
+          padding: $ziro $ziro $ziro $half-em;
+
+          img {
+            @include radius($full-size, $all: true);
+
+            border: solid 1px $ultralight-orange-border-color;
+            width: 40px;
+          }
         }
       }
     }
@@ -83,6 +108,7 @@ header {
   @extend .clear;
   @extend .box-style;
 
+  background: url("../images/tav-banner2.jpg") right center;
   margin-bottom: $half-em;
   height: 200px;
   position: $relative;
@@ -94,10 +120,56 @@ header {
     width: 77px;
     height: 79px;
     background: url("../images/flag.png") no-repeat;
-    left: -4px;
-    top: -4px;
+    left: -5px;
+    top: -5px;
   }
 }
+  .search-container {
+    @extend .transition-normal;
+    @include radius(50px, $all: true);
+
+    background-color: $ultralight-gray-color;
+    border: solid 1px $gray-color;
+    height: 35px;
+    position: $absolute;
+    bottom: $full-em * 2;
+    left: $full-em * 2;
+    width: $full-size;
+    max-width: 250px;
+
+    &:hover {
+      background-color: $pure-white-color;
+    }
+
+    input[type="text"] {
+      @extend .transition-normal;
+      @include radius(50px, $all: true);
+
+      border: none;
+      background-color: transparent;
+
+      &:focus {
+        background-color: $pure-white-color;
+      }
+    }
+
+    button {
+      @include radius(50px, $ziro, $ziro, 50px);
+
+      border: none;
+      background: none;
+      height: $full-size;
+      position: $absolute;
+      top: $ziro;
+      left: $ziro;
+      width: 40px;
+
+      &:focus,
+      &:hover {
+        outline: none;
+      }
+    }
+  }
 // end of header of website
 
 // bottom navigation of website
@@ -106,10 +178,10 @@ header {
   @extend .round-corner;
   @extend .clear;
 
-  background-color: $darkorangecolor;
-  border: solid 1px $redcolor;
+  background-color: $ultralight-orange-color;
+  border: solid 1px $ultralight-orange-border-color;
   margin-bottom: $half-em;
-  height: 50px;
+  height: 40px;
   width: $full-size;
 }
 // end of bottom navigation of website
@@ -125,23 +197,127 @@ header {
 }
 // end of main container stylesheet
 
+// main content of website stylesheet
+.content {
+  height: 500px;
+  width: 76.8%;
+
+  .left-side {
+    @extend .box-style;
+
+    width: 24.5%;
+
+    &.calendar {
+      height: 200px;
+    }
+
+    &.weather {
+      height: 90px;
+    }
+  }
+
+  .right-side {
+    @extend .box-style;
+
+    width: 74.6%;
+
+    &.slider {
+      height: 200px;
+    }
+
+    &.text-slider {
+      height: 90px;
+    }
+  }
+}
+// end of main content of website stylesheet
+
 // right side menu stylesheet
 .right-side-menu {
   @extend .box-style;
 
   height: 500px;
   width: 22.5%;
+
+  nav {
+    width: $full-size;
+
+    ul {
+      list-style: none;
+      margin: $ziro;
+      padding: $ziro;
+
+      li {
+        border-bottom: solid 1px $ultralight-gray-color;
+        min-height: 35px;
+        width: $full-size;
+
+        a {
+          @extend .transition-normal;
+
+          height: $full-size;
+          line-height: 35px;
+          position: $relative;
+          padding-right: $half-em;
+          width: $full-size;
+
+          &::before {
+            @extend .transition-normal;
+
+            background-color: $red-color;//$ultralight-orange-color;
+            content: '';
+            height: $full-size;
+            position: $absolute;
+            top: $ziro;
+            right: $ziro;
+            width: $ziro;
+          }
+
+          &:hover,
+          &:active,
+          &:focus {
+            padding-right: $full-em;
+            text-decoration: none;
+
+            &::before {
+              width: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 // end of right side menu stylesheet
 
-// main content of website stylesheet
-.content {
-  @extend .box-style;
+// box stylesheet
+.box {
+  @extend .mb;
 
-  height: 500px;
-  width: 76.8%;
+  h3 {
+    border-bottom: solid 1px $ultralight-orange-color; // #f1e8ca
+    font-size: 1.2em;
+    height: 35px;
+    margin: $ziro $ziro $half-em;
+    padding-right: $half-em;
+    width: $full-size;
+
+    span {
+      border-bottom: solid 1px $header-border-blue-color;
+      display: table;
+      height: $full-size;
+      line-height: 34px;
+      width: auto;
+
+      i {
+        color: $header-border-blue-color;
+        position: $relative;
+        top: 2px;
+      }
+    }
+  }
 }
-// end of main content of website stylesheet
+// end of box stylesheet
 
 // footer of website stylesheet
 footer {
@@ -149,8 +325,8 @@ footer {
   @extend .clear;
   @extend .box-style;
 
-  background-color: $darkgraycolor;
-  border: solid 1px $ultradarkgraycolor;
+  background-color: $dark-gray-color;
+  border: solid 1px $ultradark-gray-color;
   margin-bottom: $half-em;
   height: 200px;
   width: $full-size;

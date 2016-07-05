@@ -1,0 +1,56 @@
+.clear {
+  clear: both;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.block-el {
+  display: $disblock;
+}
+
+.bg-white {
+  background-color: $pure-white-color;
+}
+
+.mt {
+  margin-top: $half-em;
+}
+.mb {
+  margin-bottom: $half-em;
+}
+
+.transition-normal {
+  @include transition(all .4s);
+}
+
+.no-padding-side {
+  padding-left: $ziro !important;
+  padding-right: $ziro !important;
+}
+
+.round-corner {
+  @include radius($all: true);
+}
+
+.box-style {
+  @extend .round-corner;
+  @extend .bg-white;
+
+  border: solid 1px $ultralight-gray-color;
+}
+
+.wrapper {
+  margin: $ziro auto;
+  max-width: 1200px;
+}
+
+.tooltip-inner {
+  min-width: 100px;
+  font-family: $font-stack;
+}

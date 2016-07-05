@@ -21,37 +21,107 @@
 </head>
 <body>
     <!-- top nav -->
-    <nav class="nav-top">
+    <div class="nav-top">
         <nav class="navbar navbar-default sideBar">
             <div class="container-fluid noPadding">
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse no-padding-side" id="navigationMenu">
                     <ul class="nav navbar-nav rtl pull-right">
-                        <li class="pull-right anim"><a class="block anim" href="#">صفحه اصلی</a></li>
-                        <li class="pull-right anim"><a class="block anim" href="#">تالار گفتگو</a></li>
-                        <li class="pull-right anim"><a class="block anim" href="#">تازه های سایت</a></li>
-                        <li class="pull-right anim"><a class="block anim" href="#">نظر سنجی</a></li>
+                        <li class="pull-right logo-holder"><a href="#"><img src="assets/images/tinyLogo.png" alt="شرکت سهامي مديريت توليد، انتقال و توزيع نيروي برق ايران"></a></li>
+                        <li class="pull-right"><a href="#">صفحه اصلی</a></li>
+                        <li class="pull-right"><a href="#">تالار گفتگو</a></li>
+                        <li class="pull-right"><a href="#">تازه های سایت</a></li>
+                        <li class="pull-right"><a href="#">نظر سنجی</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav rtl pull-left">
+                        <li class="pull-left"><a class="icons" href="#" data-toggle="tooltip" data-placement="bottom" title="نقشه سایت"><i class="fa fa-sitemap"></i></a></li>
+                        <li class="pull-left"><a class="icons" href="#" data-toggle="tooltip" data-placement="bottom" title="ارتباط با ما"><i class="fa fa-envelope"></i></a></li>
+                        <li class="pull-left"><a class="icons" href="#" data-toggle="tooltip" data-placement="bottom" title="پرسش های متداول"><i class="fa fa-question-circle"></i></a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
-    </nav><!-- /end of top nav -->
+    </div><!-- /end of top nav -->
 
     <!-- header -->
-    <header></header><!-- /end of header -->
+    <header>
+        <div class="search-container">
+            <input class="form-control block-el rtl text-right" type="text" name="keyword" id="keyword" placeholder="جستجو ...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+    </header><!-- /end of header -->
 
     <!-- bottom nav -->
-    <nav class="nav-bottom"></nav><!-- /end of bottom nav -->
+    <nav class="nav-bottom"><i class="fa fa-home"></i></nav><!-- /end of bottom nav -->
 
     <div class="main-container">
-        <!-- right side menu -->
-        <div class="right-side-menu pull-right"></div><!-- /right side menu -->
-
         <!-- content -->
-        <div class="content pull-left"></div><!-- /content -->
+        <div class="content pull-left">
+
+            <!-- left-side of content that include calendar widget -->
+            <div class="left-side calendar box pull-left">
+                <h3><span class="pull-right rtl"><i class="fa fa-calendar"></i> تقویم</span></h3>
+            </div><!-- /left-side of content that include calendar widget -->
+
+            <!-- right-side of content that include slider widget -->
+            <div class="right-side slider box pull-right">
+                <h3><span class="pull-right rtl"><i class="fa fa-image"></i> اسلایدر</span></h3>
+            </div><!-- /right-side of content that include slider widget -->
+
+            <!-- left-side of content that include weather widget -->
+            <div class="left-side weather box pull-left">
+                <h3><span class="pull-right rtl"><i class="fa fa-sun-o"></i> وضعیت آب و هوا</span></h3>
+            </div><!-- /left-side of content that include calendar widget -->
+
+            <!-- right-side of content that include slider widget -->
+            <div class="right-side text-slider box pull-right">
+                <h3><span class="pull-right rtl"><i class="fa fa-rss"></i> تازه ترین خبر ها</span></h3>
+            </div><!-- /right-side of content that include slider widget -->
+
+            <!-- tab menu that include some feature of tavanir services -->
+            <div class="tab-menu clear">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">1</div>
+                    <div role="tabpanel" class="tab-pane" id="profile">2</div>
+                    <div role="tabpanel" class="tab-pane" id="messages">3</div>
+                    <div role="tabpanel" class="tab-pane" id="settings">4</div>
+                </div>
+            </div><!-- /tab menu that include some feature of tavanir services -->
+
+        </div><!-- /content -->
+
+        <!-- right side menu -->
+        <div class="right-side-menu box pull-right">
+            <h3><span class="pull-right rtl"><i class="fa fa-bars"></i> دسته بندی</span></h3>
+            <nav>
+                <ul>
+                    <li><a class="block-el text-right" href="#">خدمات الکترونیکی</a></li>
+                    <li><a class="block-el text-right" href="#">دفاتر پیشخوان</a></li>
+                    <li><a class="block-el text-right" href="#">پرداخت الکترونیکی قبوض</a></li>
+                    <li><a class="block-el text-right" href="#">ویژه کارکنان</a></li>
+                    <li><a class="block-el text-right" href="#">مدیریت مصرف</a></li>
+                </ul>
+            </nav>
+        </div><!-- /right side menu -->
     </div>
 
     <!-- footer -->
     <footer></footer><!-- /footer -->
+
+    <!-- essential scripts of site -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <!-- /essential scripts of site -->
+
 </body>
 </html>
