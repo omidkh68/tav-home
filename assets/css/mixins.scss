@@ -4,10 +4,10 @@
   #{$property}: calc(#{$expression});
 }
 
-@mixin box-shadow($top, $left, $blur, $color, $inset:'') {
-  -moz-box-shadow: $top $left $blur $color #{$inset};
-  -webkit-box-shadow: $top $left $blur $color #{$inset};
-  box-shadow: $top $left $blur $color #{$inset};
+@mixin box-shadow($left, $top, $blur, $color, $inset:'') {
+  -moz-box-shadow: $left $top $blur $color #{$inset};
+  -webkit-box-shadow: $left $top $blur $color #{$inset};
+  box-shadow: $left $top $blur $color #{$inset};
 }
 
 @mixin rounded($radius: .5em) {
@@ -94,4 +94,12 @@
     left: $ziro;
     width: $fullem;
   }
+}
+
+// mixin for rotation
+@mixin transform-rotate($deg: 0) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate($deg+deg);
+  -ms-transform: rotate($deg+deg);
+  transform: rotate($deg+deg);
 }

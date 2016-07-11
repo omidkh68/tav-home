@@ -15,13 +15,37 @@ body {
 
 // top navigation of website
 .nav-top {
+  @extend .transition-normal;
   @extend .wrapper;
   @extend .clear;
   @extend .box-style;
 
+  padding: $ziro $half-em;
   margin : 2em auto $half-em auto;
-  height: $nav-height;
+  height: auto;
+  min-height: $nav-height;
   width: $full-size;
+
+  &.sticky {
+    @include radius($ziro, $all: true);
+    @include box-shadow($ziro, 1px, 5px, $light-gray-color);
+    @extend .transition-normal;
+
+    border: transparent;
+    border-bottom: solid 1px $ultralight-gray-color;
+    margin-top: $ziro;
+    position: $fixed;
+    right: $ziro;
+    left: $ziro;
+    top: $ziro;
+    z-index: 1;
+    max-width: $full-size;
+    width: $full-size;
+
+    .navbar-default {
+      @include radius($ziro, $all: true);
+    }
+  }
 
   .navbar {
     margin-bottom: $ziro;
@@ -43,6 +67,10 @@ body {
       @extend .transition-normal;
 
       height: $nav-height - 2px;
+
+      &:nth-child(2) {
+        margin-right: 5px;
+      }
 
       > a {
         @extend .transition-normal;
@@ -87,7 +115,7 @@ body {
 
         a {
           line-height: 45px;
-          padding: $ziro $ziro $ziro $half-em;
+          padding: $ziro;
 
           img {
             @include radius($full-size, $all: true);
@@ -107,12 +135,17 @@ header {
   @extend .wrapper;
   @extend .clear;
   @extend .box-style;
+  @extend .transition-normal;
 
   background: url("../images/tav-banner2.jpg") right center;
   margin-bottom: $half-em;
   height: 200px;
   position: $relative;
   width: $full-size;
+
+  &.sticky-header {
+    margin-top: 80px;
+  }
 
   &::before {
     content: '';
@@ -124,6 +157,36 @@ header {
     top: -5px;
   }
 }
+
+  .lang-container {
+    height: 21px;
+    position: $absolute;
+    bottom: $full-em * 5;
+    left: $full-em * 3;
+    width: 70px;
+
+    a {
+      @include radius(2px, $all: true);
+
+      display: $disblock;
+      height: $full-size;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      width: 30px;
+
+      &.lang-fa {
+        background: url('../images/flag-fa.png') no-repeat center center;
+      }
+
+      &.lang-en {
+        background: url('../images/flag-en.png') no-repeat center center;
+      }
+    }
+
+
+  }
+
   .search-container {
     @extend .transition-normal;
     @include radius(50px, $all: true);
@@ -181,8 +244,57 @@ header {
   background-color: $ultralight-orange-color;
   border: solid 1px $ultralight-orange-border-color;
   margin-bottom: $half-em;
-  height: 40px;
+  height: auto;
+  min-height: 40px;
   width: $full-size;
+
+  .navbar-default {
+    background-color: transparent;
+    border: $none;
+    height: auto;
+    min-height: 40px;
+    margin-bottom: $ziro;
+
+    .navbar-nav {
+      padding: $ziro;
+      margin: $ziro;
+      width: $full-size;
+
+      > li {
+        height: 40px;
+        min-width: 70px;
+
+        &:not(:last-child) {
+          border-left: solid 1px $ultra-orange-border-color;
+        }
+
+        &:first-child:hover,
+        &:first-child:focus,
+        &:first-child:active {
+          a {
+            @include radius($ziro, 3px, 3px, $ziro);
+          }
+        }
+
+        > a {
+          @extend .transition-normal;
+
+          color: $dark-black-color;
+          padding: $ziro $half-em;
+          display: $disblock;
+          height: $full-size;
+          line-height: 35px;
+          width: $full-size;
+
+          &:hover,
+          &:focus,
+          &:active {
+            background-color: $white-color;
+          }
+        }
+      }
+    }
+  }
 }
 // end of bottom navigation of website
 
@@ -192,14 +304,16 @@ header {
   @extend .clear;
 
   margin-bottom: $half-em;
-  height: 500px;
+  height: auto;
   width: $full-size;
+  display: $distable;
 }
 // end of main container stylesheet
 
 // main content of website stylesheet
 .content {
-  height: 500px;
+  height: auto;
+  min-height: 500px;
   width: 76.8%;
 
   .left-side {
@@ -248,9 +362,28 @@ header {
       padding: $ziro;
 
       li {
-        border-bottom: solid 1px $ultralight-gray-color;
         min-height: 35px;
         width: $full-size;
+
+        &:not(:last-child) {
+          border-bottom: solid 1px $ultralight-gray-color;
+        }
+
+        ul {
+          border-right: solid 3px $gray-color;
+          background-color: $medium-white-color;
+
+          li {
+            &:first-child {
+              border-top: solid 1px $ultralight-gray-color;
+            }
+
+            a {
+              color: $pure-black-color;
+              font-size: .9em;
+            }
+          }
+        }
 
         a {
           @extend .transition-normal;
@@ -264,7 +397,7 @@ header {
           &::before {
             @extend .transition-normal;
 
-            background-color: $red-color;//$ultralight-orange-color;
+            background-color: $red-color;
             content: '';
             height: $full-size;
             position: $absolute;
@@ -277,11 +410,26 @@ header {
           &:active,
           &:focus {
             padding-right: $full-em;
-            text-decoration: none;
+            text-decoration: $none;
 
             &::before {
               width: 3px;
             }
+          }
+
+          &.collapsed {
+            i {
+              @include transform-rotate(180);
+            }
+          }
+
+          i {
+            @extend .transition-normal;
+
+            font-size: 1.3em;
+            position: $absolute;
+            top: $half-em;
+            left: .7em;
           }
         }
       }
@@ -295,8 +443,8 @@ header {
   @extend .mb;
 
   h3 {
-    border-bottom: solid 1px $ultralight-orange-color; // #f1e8ca
-    font-size: 1.2em;
+    border-bottom: solid 1px $ultralight-orange-color;
+    font-size: 1.1em;
     height: 35px;
     margin: $ziro $ziro $half-em;
     padding-right: $half-em;
@@ -304,13 +452,14 @@ header {
 
     span {
       border-bottom: solid 1px $header-border-blue-color;
-      display: table;
+      display: $distable;
       height: $full-size;
       line-height: 34px;
       width: auto;
 
       i {
         color: $header-border-blue-color;
+        margin-left: 5px;
         position: $relative;
         top: 2px;
       }
@@ -318,6 +467,72 @@ header {
   }
 }
 // end of box stylesheet
+
+// tab menu stylesheet
+.tab-menu {
+  @extend .wrapper;
+  @extend .clear;
+  @extend .box-style;
+
+  .nav-tabs {
+    li {
+      height: 40px;
+      width: 100px;
+
+      &.active {
+
+        a {
+          color: $medium-brown-color !important;
+
+          &::before {
+            background-color: $light-orange-color;
+          }
+        }
+      }
+
+      a {
+        @extend .transition-normal;
+        @include radius($ziro, $all: true);
+
+        background-color: transparent !important;
+        border: $none !important;
+        padding: $ziro !important;
+        position: $relative;
+        display: $disblock !important;
+        height: $full-size;
+        line-height: 40px !important;
+        width: $full-size;
+
+        &:hover,
+        &:active,
+        &:focus {
+          @include radius($ziro, $all: true);
+
+          background-color: transparent;
+          border: $none;
+        }
+
+        &::before {
+          @extend .transition-normal;
+
+          background-color: transparent;
+          content: '';
+          height: 1px;
+          position: $absolute;
+          bottom: $ziro;
+          left: $ziro;
+          right: $ziro;
+          width: $full-size;
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    min-height: 200px;
+  }
+}
+//  end of tab menu stylesheet
 
 // footer of website stylesheet
 footer {

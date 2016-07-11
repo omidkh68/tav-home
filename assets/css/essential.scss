@@ -25,6 +25,10 @@
   margin-bottom: $half-em;
 }
 
+.noPadding {
+  padding: $ziro !important;
+}
+
 .transition-normal {
   @include transition(all .4s);
 }

@@ -45,14 +45,35 @@
 
     <!-- header -->
     <header>
+        <div class="lang-container">
+            <a href="#fa" class="lang-fa pull-left"></a>
+            <a href="#en" class="lang-en pull-right"></a>
+        </div>
         <div class="search-container">
-            <input class="form-control block-el rtl text-right" type="text" name="keyword" id="keyword" placeholder="جستجو ...">
-            <button type="submit"><i class="fa fa-search"></i></button>
+            <form method="post">
+                <div class="form-group">
+                    <input class="form-control block-el rtl text-right" type="text" name="keyword" id="keyword" placeholder="جستجو ...">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
         </div>
     </header><!-- /end of header -->
 
     <!-- bottom nav -->
-    <nav class="nav-bottom"><i class="fa fa-home"></i></nav><!-- /end of bottom nav -->
+    <div class="nav-bottom">
+        <nav class="navbar navbar-default sideBar">
+            <div class="container-fluid noPadding">
+                <ul class="nav navbar-nav rtl pull-right">
+                    <li class="pull-right"><a class="text-center" href="#">درباره ما</a></li>
+                    <li class="pull-right"><a class="text-center" href="#">اخبار</a></li>
+                    <li class="pull-right"><a class="text-center" href="#">اطلاعیه ها</a></li>
+                    <li class="pull-right"><a class="text-center" href="#">نظام پیشنهادات</a></li>
+                    <li class="pull-right"><a class="text-center" href="#">رسیدگی به شکایات</a></li>
+                    <li class="pull-right"><a class="text-center" href="#">تماس با ما</a></li>
+                </ul>
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div><!-- /end of bottom nav -->
 
     <div class="main-container">
         <!-- content -->
@@ -65,7 +86,7 @@
 
             <!-- right-side of content that include slider widget -->
             <div class="right-side slider box pull-right">
-                <h3><span class="pull-right rtl"><i class="fa fa-image"></i> اسلایدر</span></h3>
+                <h3><span class="pull-right rtl"><i class="fa fa-image"></i> گالری تصاویر</span></h3>
             </div><!-- /right-side of content that include slider widget -->
 
             <!-- left-side of content that include weather widget -->
@@ -82,18 +103,18 @@
             <div class="tab-menu clear">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+                    <li class="active pull-right"><a class="text-center" href="#rr" aria-controls="rr" data-toggle="tab">قوانین و مقررات</a></li>
+                    <li class="pull-right"><a class="text-center" href="#tn" aria-controls="tn" data-toggle="tab">مناقصه و مزایده</a></li>
+                    <li class="pull-right"><a class="text-center" href="#st" aria-controls="st" data-toggle="tab">درگاه آماری</a></li>
+                    <li class="pull-right"><a class="text-center" href="#km" aria-controls="km" data-toggle="tab">مدیریت دانش</a></li>
                 </ul>
 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="home">1</div>
-                    <div role="tabpanel" class="tab-pane" id="profile">2</div>
-                    <div role="tabpanel" class="tab-pane" id="messages">3</div>
-                    <div role="tabpanel" class="tab-pane" id="settings">4</div>
+                    <div class="tab-pane active" id="rr">1</div>
+                    <div class="tab-pane" id="tn">2</div>
+                    <div class="tab-pane" id="st">3</div>
+                    <div class="tab-pane" id="km">4</div>
                 </div>
             </div><!-- /tab menu that include some feature of tavanir services -->
 
@@ -107,7 +128,19 @@
                     <li><a class="block-el text-right" href="#">خدمات الکترونیکی</a></li>
                     <li><a class="block-el text-right" href="#">دفاتر پیشخوان</a></li>
                     <li><a class="block-el text-right" href="#">پرداخت الکترونیکی قبوض</a></li>
-                    <li><a class="block-el text-right" href="#">ویژه کارکنان</a></li>
+                    <li>
+                        <a class="block-el text-right collapsed" role="button" data-toggle="collapse" href="#collapseListGroup1" aria-expanded="false" aria-controls="collapseListGroup1">
+                            <i class="fa fa-angle-up"></i> ویژه کارکنان
+                        </a>
+                        <div id="collapseListGroup1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading1" aria-expanded="false" style="height: 0;">
+                            <ul>
+                                <li><a href="#" class="block-el text-right">صفحه شخصی</a></li>
+                                <li><a href="#" class="block-el text-right">راهنمای ارتباط از راه دور اتوماسیون اداری</a></li>
+                                <li><a href="#" class="block-el text-right">پست الکترونیکی</a></li>
+                                <li><a href="#" class="block-el text-right">حقوق کارکنان توانیر</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li><a class="block-el text-right" href="#">مدیریت مصرف</a></li>
                 </ul>
             </nav>
