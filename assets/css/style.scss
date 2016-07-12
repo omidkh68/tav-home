@@ -8,7 +8,7 @@
 body {
   background-color: $medium-white-color !important;
   margin: $ziro;
-  padding: $ziro $half-em;
+  padding: $ziro;
   font-size: $body-default-font-size !important;
   font-family: $font-stack;
 }
@@ -38,7 +38,7 @@ body {
     right: $ziro;
     left: $ziro;
     top: $ziro;
-    z-index: 1;
+    z-index: 2;
     max-width: $full-size;
     width: $full-size;
 
@@ -306,7 +306,7 @@ header {
   margin-bottom: $half-em;
   height: auto;
   width: $full-size;
-  display: $distable;
+  display: $disblock;
 }
 // end of main container stylesheet
 
@@ -322,25 +322,81 @@ header {
     width: 24.5%;
 
     &.calendar {
-      height: 200px;
+      height: 235px;
     }
 
     &.weather {
-      height: 90px;
+      height: 145px;
+
+      h3 {
+        margin-bottom: $ziro;
+      }
+
+      iframe {
+        height: 100px;
+        width: $full-size;
+      }
     }
   }
 
   .right-side {
+    @include radius(3px, $all: true);
     @extend .box-style;
 
+    overflow: hidden;
     width: 74.6%;
 
     &.slider {
-      height: 200px;
+      height: 270px;
+
+      .owl-carousel {
+        @include radius(3px, $all: true);
+
+        .item {
+          width: $full-size !important;
+
+          img {
+            @include radius(3px, $all: true);
+
+            max-width: $full-size;
+            width: $full-size;
+          }
+        }
+      }
     }
 
     &.text-slider {
-      height: 90px;
+      height: 110px;
+
+      .textSlider {
+        line-height: 36px;
+        padding: $ziro 5px;
+        height: 60px;
+        overflow: hidden;
+
+        .typing {
+          margin: $ziro;
+          padding: $ziro;
+
+          a {
+            color: $dark-black-color !important;
+            text-decoration: $none;
+
+            div {
+              height: 30px;
+              overflow: hidden;
+              width: $full-size;
+            }
+
+            .viewMore {
+              @extend .clear;
+
+              color: $red-color;
+              padding: $half-em;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -350,7 +406,8 @@ header {
 .right-side-menu {
   @extend .box-style;
 
-  height: 500px;
+  height: 650px;
+  overflow: hidden;
   width: 22.5%;
 
   nav {
@@ -435,6 +492,11 @@ header {
       }
     }
   }
+
+  .panel-collapse.collapse.in {
+    overflow: auto;
+    max-height: 380px;
+  }
 }
 // end of right side menu stylesheet
 
@@ -485,7 +547,7 @@ header {
           color: $medium-brown-color !important;
 
           &::before {
-            background-color: $light-orange-color;
+            background-color: $ultra-dark-orange-color;
           }
         }
       }
@@ -529,7 +591,8 @@ header {
   }
 
   .tab-content {
-    min-height: 200px;
+    padding: $full-em;
+    min-height: 215px;
   }
 }
 //  end of tab menu stylesheet
@@ -542,8 +605,92 @@ footer {
 
   background-color: $dark-gray-color;
   border: solid 1px $ultradark-gray-color;
+  padding-top: $full-em;
   margin-bottom: $half-em;
-  height: 200px;
+  height: auto;
+  min-height: 200px;
   width: $full-size;
+
+  .footer-nav {
+    padding: $ziro 20px;
+    width: 20%;
+
+    .nav-title {
+      color: $white-color;
+      border-bottom: solid 1px $light-gray-color;
+      padding-bottom: .2em;
+      margin-bottom: 15px;
+    }
+
+    .nav-item {
+      line-height: 28px;
+
+      > a {
+        color: $gray-color;
+      }
+    }
+  }
 }
 // end of footer of website stylesheet
+
+// copyright of website stylesheet
+.cpyrgt {
+  @include box-shadow(0, -1px, 3px, $gray-color);
+
+  color: $ultradark-gray-color;
+  background-color: $ultralight-gray-color;
+  border-top: solid 1px $gray-color;
+  padding: $ziro $half-em;
+  font-size: .8em;
+  height: 28px;
+  line-height: 28px;
+  width: $full-size;
+
+  .logo-holder {
+    @include radius($full-size, $all: true);
+
+    margin: .3em 0 0 .5em;
+    display: $disblock;
+    height: 20px;
+    width: 20px;
+
+    img {
+      @include radius($full-size, $all: true);
+
+      border: solid 1px $ultralight-orange-border-color;
+      display: $disblock;
+      height: $full-size;
+      width: $full-size;
+    }
+  }
+
+  #goToTop {
+    @include opacity(0);
+    @include radius($full-size, $all: true);
+    @extend .transition-normal;
+
+    color: $pure-white-color;
+    background-color: $ultralight-orange-color;
+    border: solid 1px $medium-brown-color;
+    text-align: $center;
+    height: 40px;
+    line-height: 35px;
+    position: $fixed;
+    bottom: 40px;
+    right: 30px;
+    cursor: pointer;
+    visibility: hidden;
+    width: 40px;
+
+    &.active {
+      @include opacity(1);
+
+      visibility: visible;
+    }
+
+    i {
+      color: $medium-brown-color;
+    }
+  }
+}
+// end of copyright of website stylesheet

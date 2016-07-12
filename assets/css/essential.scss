@@ -2,6 +2,15 @@
   clear: both;
 }
 
+a {
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    text-decoration: none !important;
+  }
+}
+
 .rtl {
   direction: rtl;
 }
@@ -57,4 +66,13 @@
 .tooltip-inner {
   min-width: 100px;
   font-family: $font-stack;
+}
+
+dl {
+  margin-top: $ziro;
+  margin-bottom: 20px;
+}
+
+dd {
+  margin-right: $ziro;
 }
