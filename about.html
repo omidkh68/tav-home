@@ -40,7 +40,7 @@
                 <div class="collapse navbar-collapse no-padding-side" id="navigationMenu">
                     <ul class="nav navbar-nav rtl pull-right">
                         <li class="pull-right logo-holder"><a href="#"><img src="assets/images/tinyLogo.png" alt="شرکت سهامي مديريت توليد، انتقال و توزيع نيروي برق ايران"></a></li>
-                        <li class="pull-right"><a href="#">صفحه اصلی</a></li>
+                        <li class="pull-right"><a href="index.html">صفحه اصلی</a></li>
                         <li class="pull-right"><a href="#">تالار گفتگو</a></li>
                         <li class="pull-right"><a href="#">تازه های سایت</a></li>
                         <li class="pull-right"><a href="#">نظر سنجی</a></li>
@@ -76,7 +76,14 @@
         <nav class="navbar navbar-default sideBar">
             <div class="container-fluid noPadding">
                 <ul class="nav navbar-nav rtl pull-right">
-                    <li class="pull-right"><a class="text-center" href="#">درباره ما</a></li>
+                    <li class="pull-right">
+                        <a class="dropdown-toggle text-right" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">درباره ما <i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="text-right" href="about.html">تاریخچه صنعت برق در ایران</a></li>
+                            <li><a class="text-right" href="#">اساسنامه شرکت های صنعت برق</a></li>
+                            <li><a class="text-right" href="#">چارت سازمانی</a></li>
+                        </ul>
+                    </li>
                     <li class="pull-right"><a class="text-center" href="#">اخبار</a></li>
                     <li class="pull-right"><a class="text-center" href="#">اطلاعیه ها</a></li>
                     <li class="pull-right"><a class="text-center" href="#">نظام پیشنهادات</a></li>
@@ -92,109 +99,89 @@
         <div class="content pull-left">
 
             <!-- left-side of content that include calendar widget -->
-            <div class="left-side calendar box pull-left">
-                <h3><span class="pull-right rtl"><i class="fa fa-calendar"></i> تقویم</span></h3>
+            <div class="box full-box pull-left">
+                <h3><span class="pull-right rtl">درباره ما</span></h3>
+                <div class="content">
+                    <p class="rtl text-justify">
+                        در سال 1279 هجري شمسي يك موتور برق 12 اسبي 110 ولت از خارج از كشور
+                        خريداري و در “بالا خيابان مشهد” نصب شد تا براي روشنايي حرم مطهر حضرت‌
+                        امام‌رضا(ع) مورد استفاده قرار گيرد. اما اولين مجوز تاسيس يك كارخانه
+                        برق در كشور به يك بازرگان ايراني به نام حاج‌حسين آقا امين‌الضرب داده
+                        شد . حاج امين‌الضرب اقدام به تاسيس اولين كارخانه برق عمومي در تهران
+                        كرد. تهران تا سال 1283 هـ.ش فاقد برق بود. از اين زمان به بعد چند
+                        خيابان عمده تهران داراي برق شدند<br>
+                        در اين هنگام شهرداري تهران مسووليت تهيه، نصب ،‌تعمير و نگهداري
+                        تأسيسات مربوط به روشنايي معابر را برعهده داشت و به اين منظور در
+                        شهرداري تهران واحدي به نام “اداره روشنايي” ايجاد شد. <br>
+                        تا اينكه در سال 1315 با تصويب اساسنامه مؤسسه برق شهرداري تهران،‌اداره
+                        روشنايي شهرداري به مؤسسه برق تهران تبديل شد و به عنوان يك مؤسسه
+                        مستقل زيرنظر شهرداري به انجام وظايف خود پرداخت. <br>
+                        در واقع تا سال 1341 براي مديريت برق كشور سازمان واحدي وجود نداشت و
+                        تصميمات كلان از طريق وزارت كشور و سازمان برنامه و بودجه به شهرداريها
+                        و مؤسسات خصوصي يا دولتي متولي برق در شهرستانها ابلاغ و اعمال مي‌شد.
+                        با افزايش تقاضا و خارج شدن توليد و مصرف برق از وضعيت محدود منطقه‌اي
+                        و بخصوص ايجاد نيروگاههاي آبي در برنامه سوم عمراني كشور كه از مهرماه
+                        1341 به اجرا گذاشته شد، صنعت برق اهميت بيشتري يافت و ايجاد سازمان
+                        مستقلي براي توسعه اين صنعت لازم تشخيص داده شد. به اين منظور در دي‌ماه
+                        1341 سازمان برق ايران تأسيس شد. <br>
+                        توسعه سريع صنعت برق فكر ايجاد وزارتخانه‌اي براي تأمين آب و برق
+                        موردنياز كشور را ايجاد كرد و برهمين اساس در 22 اسفند 1342 وزارت آب و
+                        برق تأسيس شد. در تيرماه 1344 قانون توسعة مؤسسات برق غيردولتي به
+                        تصويب مجلسين شوراي ملي و سنا (مجلسين وقت)‌رسيد. همين طور براساس ماده
+                        2 قانون سازمان برق ايران در سال 1346 به وزارت آب و برق اجازه داده شد
+                        تا كشور را از نظر تأمين برق،‌بدون الزام به پيروي از تقسيمات كشوري به
+                        مناطقي تقسيم و به تدريج نسبت به تأسيس شركتهاي برق منطقه‌اي اقدام كند.
+                        <br>
+                        در سال 1348 نيز شركت توانير با مسؤوليت توسعة‌تأسيسات توليد، انتقال و
+                        عمده فروشي برق تشكيل شد. <br>
+                        در 28 بهمن 1353 با محول كردن برنامه‌ريزي جامع و هماهنگ‌كردن فعاليت
+                        انرژي در سطح كشور به وزارت آب و برق اين وزارت به وزارت‌ نيرو تغيير
+                        نام يافت و در همان سال و سال بعد تغييراتي در اساسنامه شركت توانير
+                        ايجاد شد. پس از پيروزي انقلاب اسلامي و با شرايط جديدي كه در صنعت برق
+                        از نظر كيفي و كمي ايجاد شد مسأله تغييرات در ساختار صنعت برق اهميت
+                        ويژه‌اي يافت و سرانجام شركت توانير در مهرماه سال 1374 به سازمان
+                        مديريت توليد و انتقال نيروي برق ايران(توانير) تبديل و وظايف و
+                        مأموريتهاي معاونت امور برق وزارت نيرو به اين سازمان محول و پست
+                        مديرعامل اين سازمان به معاونت امور برق داده شد. <br>
+                        بالاخره در جلسه مورخ 27/9/81 هيئت وزيران بنا به پيشنهاد وزارت نيرو و
+                        تأييد سازمان مديريت و برنامه‌ريزي كشور و وزارت امور اقتصادي و دارايي
+                        در ساختار شركت توانير تغييراتي ايجاد و اساسنامه آن به نام شركت
+                        مادرتخصصي مديريت توليد، انتقال و توزيع نيروي برق ايران (توانير)‌به
+                        تصويب رسيد. <br>
+                        <br>
+                    </p>
+
+                    <table class="table table-condensed rtl">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div><!-- /left-side of content that include calendar widget -->
-
-            <!-- right-side of content that include slider widget -->
-            <div class="right-side slider box pull-right">
-                <div class="owl-carousel">
-                    <div class="item">
-                        <img src="assets/images/slider/6.png" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="assets/images/slider/1.png" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="assets/images/slider/2.png" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="assets/images/slider/3.png" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="assets/images/slider/4.png" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="assets/images/slider/5.png" alt="">
-                    </div>
-                </div>
-            </div><!-- /right-side of content that include slider widget -->
-
-            <!-- left-side of content that include weather widget -->
-            <div class="left-side weather box pull-left">
-                <h3><span class="pull-right rtl"><i class="fa fa-sun-o"></i> وضعیت آب و هوا</span></h3>
-                <iframe src="http://wamp.tavanir.org.ir/weather/weather2.htm" scrolling="no" frameborder="0" style="width:100%"></iframe>
-            </div><!-- /left-side of content that include calendar widget -->
-
-            <!-- right-side of content that include slider widget -->
-            <div class="right-side text-slider box pull-right">
-                <h3><span class="pull-right rtl"><i class="fa fa-rss"></i> تازه ترین خبر ها</span></h3>
-                <div class="textSlider">
-                    <ul class="typing">
-                        <li>
-                            <a target="_blank" href="#" title="">
-                                <div>جمله خبری 1</div>
-                                <span class="viewMore"> ادامه...</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="#" title="">
-                                <div>جمله خبری 1</div>
-                                <span class="viewMore"> ادامه...</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="#" title="">
-                                <div>جمله خبری 2</div>
-                                <span class="viewMore"> ادامه...</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="#" title="">
-                                <div>جمله خبری 3</div>
-                                <span class="viewMore"> ادامه...</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="#" title="">
-                                <div>جمله خبری 4</div>
-                                <span class="viewMore"> ادامه...</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="#" title="">
-                                <div>جمله خبری 5</div>
-                                <span class="viewMore"> ادامه...</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="#" title="">
-                                <div>جمله خبری 6</div>
-                                <span class="viewMore"> ادامه...</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div><!-- /right-side of content that include slider widget -->
-
-            <!-- tab menu that include some feature of tavanir services -->
-            <div class="tab-menu clear">
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
-                    <li class="active pull-right"><a class="text-center" href="#rr" aria-controls="rr" data-toggle="tab">قوانین و مقررات</a></li>
-                    <li class="pull-right"><a class="text-center" href="#tn" aria-controls="tn" data-toggle="tab">مناقصه و مزایده</a></li>
-                    <li class="pull-right"><a class="text-center" href="#st" aria-controls="st" data-toggle="tab">درگاه آماری</a></li>
-                    <li class="pull-right"><a class="text-center" href="#km" aria-controls="km" data-toggle="tab">مدیریت دانش</a></li>
-                </ul>
-
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <div class="tab-pane active" id="rr">1</div>
-                    <div class="tab-pane" id="tn">2</div>
-                    <div class="tab-pane" id="st">3</div>
-                    <div class="tab-pane" id="km">4</div>
-                </div>
-            </div><!-- /tab menu that include some feature of tavanir services -->
 
         </div><!-- /content -->
 

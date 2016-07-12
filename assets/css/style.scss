@@ -527,6 +527,22 @@ header {
       }
     }
   }
+
+  &.full-box {
+    @extend .box-style;
+
+    width: $full-size;
+
+    .content {
+      padding: $full-em;
+      width: $full-size;
+
+      p {
+        width: $full-size;
+      }
+    }
+
+  }
 }
 // end of box stylesheet
 

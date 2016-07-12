@@ -14,7 +14,7 @@ a:hover, a:focus, a:active, a:visited {
 .block-el {
   display: block; }
 
-.bg-white, .box-style, .nav-top, header, .content .left-side, .content .right-side, .right-side-menu, .tab-menu, footer {
+.bg-white, .box-style, .nav-top, header, .content .left-side, .content .right-side, .right-side-menu, .box.full-box, .tab-menu, footer {
   background-color: #fff; }
 
 .mt {
@@ -37,12 +37,12 @@ a:hover, a:focus, a:active, a:visited {
   padding-left: 0 !important;
   padding-right: 0 !important; }
 
-.round-corner, .box-style, .nav-top, header, .content .left-side, .content .right-side, .right-side-menu, .tab-menu, footer, .nav-top .navbar-default, .nav-bottom {
+.round-corner, .box-style, .nav-top, header, .content .left-side, .content .right-side, .right-side-menu, .box.full-box, .tab-menu, footer, .nav-top .navbar-default, .nav-bottom {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px; }
 
-.box-style, .nav-top, header, .content .left-side, .content .right-side, .right-side-menu, .tab-menu, footer {
+.box-style, .nav-top, header, .content .left-side, .content .right-side, .right-side-menu, .box.full-box, .tab-menu, footer {
   border: solid 1px #e1e1e1; }
 
 .wrapper, .nav-top, header, .nav-bottom, .main-container, .tab-menu, footer {
@@ -2583,6 +2583,13 @@ header {
       margin-left: 5px;
       position: relative;
       top: 2px; }
+.box.full-box {
+  width: 100%; }
+  .box.full-box .content {
+    padding: 1em;
+    width: 100%; }
+    .box.full-box .content p {
+      width: 100%; }
 
 .tab-menu .nav-tabs li {
   height: 40px;

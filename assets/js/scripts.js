@@ -15,9 +15,9 @@ $(document).ready(function() {
         items:1,
         margin:0,
         loop:true,
-        nav:true,
+        nav:false,
         autoHeight: true,
-        autoplay: false
+        autoplay: true
     });
 
     $('.typing').inewsticker({
