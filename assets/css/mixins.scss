@@ -79,10 +79,10 @@
   padding-left: $fullem;
 
   &::before {
-    bottom: $ziro;
+    bottom: $zero;
     content: '...';
     position: $absolute;
-    left: $ziro;
+    left: $zero;
   }
 
   &::after {
@@ -91,7 +91,7 @@
     height: $fullem;
     margin-top: .2em;
     position: $absolute;
-    left: $ziro;
+    left: $zero;
     width: $fullem;
   }
 }

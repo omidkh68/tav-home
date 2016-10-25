@@ -20,6 +20,7 @@ $(document).ready(function() {
         autoplay: true
     });
 
+    // news ticker
     $('.typing').inewsticker({
         speed: 7000,
         effect: 'fade',
@@ -36,7 +37,7 @@ $(document).ready(function() {
     });
 
     $(window).scroll(function() {
-        if($(this).scrollTop() > 80){
+        if($(this).scrollTop() > 100){
             $topNav.addClass("sticky");
             $header.addClass('sticky-header');
         }

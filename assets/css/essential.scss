@@ -1,4 +1,4 @@
-.clear {
+%clear {
   clear: both;
 }
 
@@ -11,68 +11,90 @@ a {
   }
 }
 
+%rtl,
 .rtl {
   direction: rtl;
 }
 
+%ltr,
 .ltr {
   direction: ltr;
 }
 
-.block-el {
+%block-el {
   display: $disblock;
 }
 
-.bg-white {
+%bg-white {
   background-color: $pure-white-color;
 }
 
-.mt {
-  margin-top: $half-em;
-}
-.mb {
-  margin-bottom: $half-em;
+%mt {
+  margin-top: $half-em !important;
 }
 
-.noPadding {
-  padding: $ziro !important;
+%mb {
+  margin-bottom: $half-em !important;
 }
 
-.transition-normal {
+%ml {
+  margin-left: $half-em !important;
+}
+
+%mr {
+  margin-right: $half-em !important;
+}
+
+%no-padding,
+.no-padding {
+  padding: $zero !important;
+}
+
+%transition-normal {
   @include transition(all .4s);
 }
 
-.no-padding-side {
-  padding-left: $ziro !important;
-  padding-right: $ziro !important;
+%no-padding-side {
+  padding-left: $zero !important;
+  padding-right: $zero !important;
 }
 
-.round-corner {
+%round-corner {
   @include radius($all: true);
 }
 
-.box-style {
-  @extend .round-corner;
-  @extend .bg-white;
+%box-style {
+  @extend %round-corner;
+  @extend %bg-white;
 
   border: solid 1px $ultralight-gray-color;
 }
 
-.wrapper {
-  margin: $ziro auto;
+%wrapper {
+  margin: $zero auto;
   max-width: 1200px;
 }
 
-.tooltip-inner {
-  min-width: 100px;
+%tooltip-inner {
   font-family: $font-stack;
+  min-width: 100px;
 }
 
 dl {
-  margin-top: $ziro;
   margin-bottom: 20px;
+  margin-top: $zero;
 }
 
 dd {
-  margin-right: $ziro;
+  margin-right: $zero;
+}
+
+%full-of-parent {
+  display: $disblock;
+  height: $full-size;
+  width: $full-size;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+  background-color: $pure-white-color !important;
 }

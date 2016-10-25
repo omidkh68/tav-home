@@ -7,92 +7,92 @@
 
 body {
   background-color: $medium-white-color !important;
-  margin: $ziro;
-  padding: $ziro;
-  font-size: $body-default-font-size !important;
   font-family: $font-stack;
+  font-size: $body-default-font-size;
+  margin: $zero;
+  padding: $zero;
 }
 
 // top navigation of website
 .nav-top {
-  @extend .transition-normal;
-  @extend .wrapper;
-  @extend .clear;
-  @extend .box-style;
-
-  padding: $ziro $half-em;
-  margin : 2em auto $half-em auto;
   height: auto;
+  margin: 2em auto $half-em;
   min-height: $nav-height;
+  padding: $zero $half-em;
   width: $full-size;
 
-  &.sticky {
-    @include radius($ziro, $all: true);
-    @include box-shadow($ziro, 1px, 5px, $light-gray-color);
-    @extend .transition-normal;
+  @extend %transition-normal;
+  @extend %wrapper;
+  @extend %clear;
+  @extend %box-style;
 
+  &.sticky {
     border: transparent;
     border-bottom: solid 1px $ultralight-gray-color;
-    margin-top: $ziro;
-    position: $fixed;
-    right: $ziro;
-    left: $ziro;
-    top: $ziro;
+    left: $zero;
+    margin-top: $zero;
+    top: $zero;
+    right: $zero;
     z-index: 2;
+    position: $fixed;
     max-width: $full-size;
     width: $full-size;
 
+    @include radius($zero, $all: true);
+    @include box-shadow($zero, 1px, 5px, $light-gray-color);
+    @extend %transition-normal;
+
     .navbar-default {
-      @include radius($ziro, $all: true);
+      @include radius($zero, $all: true);
     }
   }
 
   .navbar {
-    margin-bottom: $ziro;
+    margin-bottom: $zero;
   }
 
   .navbar-default {
-    @extend .round-corner;
-
     background-color: transparent;
     border:none;
     min-height: $nav-height - 2px;
     max-width: $full-size;
 
+    @extend %round-corner;
+
     .navbar-nav {
-      padding: $ziro;
+      padding: $zero;
     }
 
     .navbar-nav > li {
-      @extend .transition-normal;
-
       height: $nav-height - 2px;
+
+      @extend %transition-normal;
 
       &:nth-child(2) {
         margin-right: 5px;
       }
 
       > a {
-        @extend .transition-normal;
-
         color: $dark-orange-color;
         width: $full-size;
         height: $full-size;
         position: $relative;
         line-height: $nav-height - 2px;
-        padding: $ziro $full-em;
+        padding: $zero $full-em;
         text-align: $center;
 
-        &::before {
-          @extend .transition-normal;
+        @extend %transition-normal;
 
+        &::before {
           background-color: $ultralight-orange-border-color;
           content: '';
           height: 2px;
           position: $absolute;
-          bottom: $ziro;
-          right: $ziro;
-          width: $ziro;
+          bottom: $zero;
+          right: $zero;
+          width: $zero;
+
+          @extend %transition-normal;
         }
 
         &:hover::before {
@@ -105,7 +105,7 @@ body {
       }
 
       &:hover {
-        background: #f1fbcc;
+        background: $white-color;
       }
 
       &.logo-holder {
@@ -115,13 +115,13 @@ body {
 
         a {
           line-height: 45px;
-          padding: $ziro;
+          padding: $zero;
 
           img {
-            @include radius($full-size, $all: true);
-
             border: solid 1px $ultralight-orange-border-color;
             width: 40px;
+
+            @include radius($full-size, $all: true);
           }
         }
       }
@@ -132,16 +132,16 @@ body {
 
 // header of website
 header {
-  @extend .wrapper;
-  @extend .clear;
-  @extend .box-style;
-  @extend .transition-normal;
-
   background: url("../images/tav-banner2.jpg") right center;
   margin-bottom: $half-em;
   height: 200px;
   position: $relative;
   width: $full-size;
+
+  @extend %wrapper;
+  @extend %clear;
+  @extend %box-style;
+  @extend %transition-normal;
 
   &.sticky-header {
     margin-top: 80px;
@@ -158,39 +158,7 @@ header {
   }
 }
 
-  .lang-container {
-    height: 21px;
-    position: $absolute;
-    bottom: $full-em * 5;
-    left: $full-em * 3;
-    width: 70px;
-
-    a {
-      @include radius(2px, $all: true);
-
-      display: $disblock;
-      height: $full-size;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      background-size: cover;
-      width: 30px;
-
-      &.lang-fa {
-        background: url('../images/flag-fa.png') no-repeat center center;
-      }
-
-      &.lang-en {
-        background: url('../images/flag-en.png') no-repeat center center;
-      }
-    }
-
-
-  }
-
   .search-container {
-    @extend .transition-normal;
-    @include radius(50px, $all: true);
-
     background-color: $ultralight-gray-color;
     border: solid 1px $gray-color;
     height: 35px;
@@ -200,16 +168,19 @@ header {
     width: $full-size;
     max-width: 250px;
 
+    @extend %transition-normal;
+    @include radius(50px, $all: true);
+
     &:hover {
       background-color: $pure-white-color;
     }
 
     input[type="text"] {
-      @extend .transition-normal;
-      @include radius(50px, $all: true);
-
       border: none;
       background-color: transparent;
+
+      @extend %transition-normal;
+      @include radius(50px, $all: true);
 
       &:focus {
         background-color: $pure-white-color;
@@ -217,15 +188,15 @@ header {
     }
 
     button {
-      @include radius(50px, $ziro, $ziro, 50px);
-
       border: none;
       background: none;
       height: $full-size;
       position: $absolute;
-      top: $ziro;
-      left: $ziro;
+      top: $zero;
+      left: $zero;
       width: 40px;
+
+      @include radius(50px, $zero, $zero, 50px);
 
       &:focus,
       &:hover {
@@ -237,10 +208,6 @@ header {
 
 // bottom navigation of website
 .nav-bottom {
-  @extend .wrapper;
-  @extend .round-corner;
-  @extend .clear;
-
   background-color: $ultralight-orange-color;
   border: solid 1px $ultralight-orange-border-color;
   margin-bottom: $half-em;
@@ -248,16 +215,20 @@ header {
   min-height: 40px;
   width: $full-size;
 
+  @extend %wrapper;
+  @extend %round-corner;
+  @extend %clear;
+
   .navbar-default {
     background-color: transparent;
     border: $none;
     height: auto;
     min-height: 40px;
-    margin-bottom: $ziro;
+    margin-bottom: $zero;
 
     .navbar-nav {
-      padding: $ziro;
-      margin: $ziro;
+      padding: $zero;
+      margin: $zero;
       width: $full-size;
 
       > li {
@@ -272,24 +243,59 @@ header {
         &:first-child:focus,
         &:first-child:active {
           a {
-            @include radius($ziro, 3px, 3px, $ziro);
+            @include radius($zero, 3px, 3px, $zero);
+          }
+        }
+
+        .dropdown-toggle {
+          padding-left: $full-em + .5;
+        }
+
+        .dropdown-menu {
+          right: -1px;
+        }
+
+        .lang {
+          -moz-background-size: cover;
+          -webkit-background-size: cover;
+          background-size: cover;
+          display: $disblock;
+          height: $full-size;
+          padding: $zero !important;
+          width: 30px;
+
+          @include radius(2px, $all: true);
+
+          &.lang-fa {
+            background: url('../images/flag-fa.png') no-repeat center center;
+          }
+
+          &.lang-en {
+            background: url('../images/flag-en.png') no-repeat center center;
           }
         }
 
         > a {
-          @extend .transition-normal;
-
           color: $dark-black-color;
-          padding: $ziro $half-em;
-          display: $disblock;
-          height: $full-size;
           line-height: 35px;
-          width: $full-size;
+          padding: $zero $half-em;
+
+          @extend %transition-normal;
+          @extend %full-of-parent;
 
           &:hover,
           &:focus,
           &:active {
             background-color: $white-color;
+          }
+
+          .fa {
+            @extend %ml;
+
+            display: $disblock;
+            left: $zero;
+            position: $absolute;
+            top: 12px;
           }
         }
       }
@@ -300,13 +306,13 @@ header {
 
 // main container stylesheet
 .main-container {
-  @extend .wrapper;
-  @extend .clear;
-
-  margin-bottom: $half-em;
-  height: auto;
-  width: $full-size;
   display: $disblock;
+  height: auto;
+  margin-bottom: $half-em;
+  width: $full-size;
+
+  @extend %wrapper;
+  @extend %clear;
 }
 // end of main container stylesheet
 
@@ -317,9 +323,9 @@ header {
   width: 76.8%;
 
   .left-side {
-    @extend .box-style;
-
     width: 24.5%;
+
+    @extend %box-style;
 
     &.calendar {
       height: 235px;
@@ -329,7 +335,7 @@ header {
       height: 145px;
 
       h3 {
-        margin-bottom: $ziro;
+        margin-bottom: $zero;
       }
 
       iframe {
@@ -340,11 +346,11 @@ header {
   }
 
   .right-side {
-    @include radius(3px, $all: true);
-    @extend .box-style;
-
-    overflow: hidden;
+    overflow: $hidden;
     width: 74.6%;
+
+    @include radius(3px, $all: true);
+    @extend %box-style;
 
     &.slider {
       height: 270px;
@@ -356,10 +362,10 @@ header {
           width: $full-size !important;
 
           img {
-            @include radius(3px, $all: true);
-
             max-width: $full-size;
             width: $full-size;
+
+            @include radius(3px, $all: true);
           }
         }
       }
@@ -369,30 +375,34 @@ header {
       height: 110px;
 
       .textSlider {
-        line-height: 36px;
-        padding: $ziro 5px;
         height: 60px;
-        overflow: hidden;
+        line-height: 36px;
+        overflow: $hidden;
+        padding: $zero 5px;
 
         .typing {
-          margin: $ziro;
-          padding: $ziro;
+          list-style: $none;
+          margin: $zero;
+          padding: $zero;
 
           a {
             color: $dark-black-color !important;
+            float: $right;
             text-decoration: $none;
+
+            @extend %full-of-parent;
 
             div {
               height: 30px;
-              overflow: hidden;
+              overflow: $hidden;
               width: $full-size;
             }
 
             .viewMore {
-              @extend .clear;
-
               color: $red-color;
               padding: $half-em;
+
+              @extend %clear;
             }
           }
         }
@@ -404,19 +414,19 @@ header {
 
 // right side menu stylesheet
 .right-side-menu {
-  @extend .box-style;
-
   height: 650px;
-  overflow: hidden;
+  overflow: $hidden;
   width: 22.5%;
+
+  @extend %box-style;
 
   nav {
     width: $full-size;
 
     ul {
       list-style: none;
-      margin: $ziro;
-      padding: $ziro;
+      margin: $zero;
+      padding: $zero;
 
       li {
         min-height: 35px;
@@ -427,8 +437,8 @@ header {
         }
 
         ul {
+          background-color: $white-color;
           border-right: solid 3px $gray-color;
-          background-color: $medium-white-color;
 
           li {
             &:first-child {
@@ -443,24 +453,23 @@ header {
         }
 
         a {
-          @extend .transition-normal;
-
-          height: $full-size;
           line-height: 35px;
-          position: $relative;
           padding-right: $half-em;
-          width: $full-size;
+          position: $relative;
+
+          @extend %transition-normal;
+          @extend %full-of-parent;
 
           &::before {
-            @extend .transition-normal;
-
             background-color: $red-color;
             content: '';
             height: $full-size;
             position: $absolute;
-            top: $ziro;
-            right: $ziro;
-            width: $ziro;
+            right: $zero;
+            top: $zero;
+            width: $zero;
+
+            @extend %transition-normal;
           }
 
           &:hover,
@@ -481,34 +490,35 @@ header {
           }
 
           i {
-            @extend .transition-normal;
-
             font-size: 1.3em;
+            left: .7em;
             position: $absolute;
             top: $half-em;
-            left: .7em;
+
+            @extend %transition-normal;
           }
         }
       }
     }
   }
 
-  .panel-collapse.collapse.in {
+  .panel-collapse.collapse {
+    direction: $dirright;
+    max-height: 390px !important;
     overflow: auto;
-    max-height: 380px;
   }
 }
 // end of right side menu stylesheet
 
 // box stylesheet
 .box {
-  @extend .mb;
+  @extend %mb;
 
   h3 {
     border-bottom: solid 1px $ultralight-orange-color;
     font-size: 1.1em;
     height: 35px;
-    margin: $ziro $ziro $half-em;
+    margin: $zero $zero $half-em;
     padding-right: $half-em;
     width: $full-size;
 
@@ -529,15 +539,17 @@ header {
   }
 
   &.full-box {
-    @extend .box-style;
-
     width: $full-size;
 
+    @extend %box-style;
+
     .content {
+      min-height: 100px;
       padding: $full-em;
       width: $full-size;
 
       p {
+        line-height: 2;
         width: $full-size;
       }
     }
@@ -548,10 +560,6 @@ header {
 
 // tab menu stylesheet
 .tab-menu {
-  @extend .wrapper;
-  @extend .clear;
-  @extend .box-style;
-
   .nav-tabs {
     li {
       height: 40px;
@@ -569,80 +577,111 @@ header {
       }
 
       a {
-        @extend .transition-normal;
-        @include radius($ziro, $all: true);
-
         background-color: transparent !important;
         border: $none !important;
-        padding: $ziro !important;
-        position: $relative;
-        display: $disblock !important;
-        height: $full-size;
         line-height: 40px !important;
-        width: $full-size;
+        padding: $zero !important;
+        position: $relative;
+
+        @extend %transition-normal;
+        @extend %full-of-parent;
+        @include radius($zero, $all: true);
 
         &:hover,
         &:active,
         &:focus {
-          @include radius($ziro, $all: true);
-
           background-color: transparent;
           border: $none;
+
+          @include radius($zero, $all: true);
         }
 
         &::before {
-          @extend .transition-normal;
-
           background-color: transparent;
+          bottom: $zero;
           content: '';
           height: 1px;
+          left: $zero;
           position: $absolute;
-          bottom: $ziro;
-          left: $ziro;
-          right: $ziro;
+          right: $zero;
           width: $full-size;
+
+          @extend %transition-normal;
         }
       }
     }
   }
 
+  @extend %wrapper;
+  @extend %clear;
+  @extend %box-style;
+
   .tab-content {
-    padding: $full-em;
     min-height: 215px;
+    padding: $full-em;
   }
 }
 //  end of tab menu stylesheet
 
 // footer of website stylesheet
 footer {
-  @extend .wrapper;
-  @extend .clear;
-  @extend .box-style;
-
-  background-color: $dark-gray-color;
+  background-color: $dark-blue-color;
   border: solid 1px $ultradark-gray-color;
-  padding-top: $full-em;
-  margin-bottom: $half-em;
   height: auto;
+  margin-bottom: $half-em;
   min-height: 200px;
+  padding-top: $full-em;
   width: $full-size;
 
+  @extend %wrapper;
+  @extend %clear;
+  @extend %box-style;
+
   .footer-nav {
-    padding: $ziro 20px;
+    padding: $zero 20px;
     width: 20%;
 
     .nav-title {
-      color: $white-color;
       border-bottom: solid 1px $light-gray-color;
-      padding-bottom: .2em;
+      color: $orange-color;
       margin-bottom: 15px;
+      padding-bottom: .2em;
+
+      > i {
+        color: $ultralight-orange-border-color;
+        margin-left: $half-em;
+      }
     }
 
     .nav-item {
       line-height: 28px;
 
-      > a {
-        color: $gray-color;
+      a {
+        color: $white-color;
+        overflow: $hidden;
+        position: $relative;
+
+        @extend %transition-normal;
+        @extend %full-of-parent;
+
+        &:hover {
+          color: $pure-white-color;
+          padding-right: $full-em;
+
+          i {
+            color: $light-cyan-color;
+            right: $zero;
+          }
+        }
+
+        i {
+          color: $ultralight-orange-border-color;
+          position: $absolute;
+          right: -$full-size;
+          top: 9px;
+
+          @extend %transition-normal;
+        }
       }
     }
   }
@@ -651,57 +690,55 @@ footer {
 
 // copyright of website stylesheet
 .cpyrgt {
-  @include box-shadow(0, -1px, 3px, $gray-color);
-
-  color: $ultradark-gray-color;
   background-color: $ultralight-gray-color;
   border-top: solid 1px $gray-color;
-  padding: $ziro $half-em;
+  color: $ultradark-gray-color;
   font-size: .8em;
   height: 28px;
   line-height: 28px;
+  padding: $zero $half-em;
   width: $full-size;
 
-  .logo-holder {
-    @include radius($full-size, $all: true);
+  @include box-shadow(0, -1px, 3px, $gray-color);
 
-    margin: .3em 0 0 .5em;
+  .logo-holder {
     display: $disblock;
     height: 20px;
+    margin: .3em $zero $zero .5em;
     width: 20px;
 
-    img {
-      @include radius($full-size, $all: true);
+    @include radius($full-size, $all: true);
 
+    img {
       border: solid 1px $ultralight-orange-border-color;
-      display: $disblock;
-      height: $full-size;
-      width: $full-size;
+
+      @extend %full-of-parent;
+      @include radius($full-size, $all: true);
     }
   }
 
   #goToTop {
-    @include opacity(0);
-    @include radius($full-size, $all: true);
-    @extend .transition-normal;
-
-    color: $pure-white-color;
     background-color: $ultralight-orange-color;
     border: solid 1px $medium-brown-color;
-    text-align: $center;
+    bottom: 40px;
+    color: $pure-white-color;
+    cursor: pointer;
     height: 40px;
     line-height: 35px;
     position: $fixed;
-    bottom: 40px;
     right: 30px;
-    cursor: pointer;
-    visibility: hidden;
+    text-align: $center;
+    visibility: $hidden;
     width: 40px;
 
-    &.active {
-      @include opacity(1);
+    @include opacity(0);
+    @include radius($full-size, $all: true);
+    @extend %transition-normal;
 
+    &.active {
       visibility: visible;
+
+      @include opacity(1);
     }
 
     i {
